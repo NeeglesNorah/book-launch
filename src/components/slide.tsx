@@ -25,7 +25,6 @@ import dsc9146Image from '../assets/images/DSC_9146.jpg'
 import dsc9164Image from '../assets/images/DSC_9164.jpg'
 import fus1646Image from '../assets/images/FUS_1646.jpg'
 import mumGracefulImage from '../assets/images/Mum Graceful.jpg'
-// import mumImage from '../assets/images/MUM.JPG' // Removed due to case sensitivity issues
 import mum1Image from '../assets/images/mum1.jpg'
 import mum2Image from '../assets/images/mum2.jpg'
 
