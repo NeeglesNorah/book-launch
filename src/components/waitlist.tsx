@@ -217,7 +217,22 @@ export const WaitlistForm = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-black text-black py-3 px-4 rounded-md font-medium  flex items-center justify-center gap-2"
+                  className="w-full py-3 px-4 rounded-md font-medium flex items-center justify-center gap-2"
+                  style={{
+                    backgroundColor: '#ffffff',
+                    color: '#314E34',
+                    border: '1px solid #e5e7eb'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isSubmitting) {
+                      e.currentTarget.style.setProperty('background-color', '#f3f4f6', 'important');
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isSubmitting) {
+                      e.currentTarget.style.setProperty('background-color', '#ffffff', 'important');
+                    }
+                  }}
                 >
                   {isSubmitting ? (
                     <>
