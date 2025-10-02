@@ -1,13 +1,22 @@
+import dsc9089Image from '../assets/images/DSC_9089.jpg'
+import dsc9094Image from '../assets/images/DSC_9094.jpg'
+import dsc9097Image from '../assets/images/DSC_9097.jpg'
+import dsc9146Image from '../assets/images/DSC_9146.jpg'
+import dsc9164Image from '../assets/images/DSC_9164.jpg'
+import fus1646Image from '../assets/images/FUS_1646.jpg'
+import dsc0016Image from '../assets/images/DSC_0016.jpg'
+import dsc0017Image from '../assets/images/DSC_0017.jpg'
+
 export const Case1 = () => {
   const images = [
-    '/src/assets/images/DSC_9089.jpg',
-    '/src/assets/images/DSC_9094.jpg',
-    '/src/assets/images/DSC_9097.jpg',
-    '/src/assets/images/DSC_9146.jpg',
-    '/src/assets/images/DSC_9164.jpg',
-    '/src/assets/images/FUS_1646.jpg',
-    '/src/assets/images/DSC_0016.JPG',
-    '/src/assets/images/DSC_0017.JPG'
+    dsc9089Image,
+    dsc9094Image,
+    dsc9097Image,
+    dsc9146Image,
+    dsc9164Image,
+    fus1646Image,
+    dsc0016Image,
+    dsc0017Image
   ];
 
   // Duplicate images for seamless infinite scroll
