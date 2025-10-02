@@ -17,24 +17,22 @@ const Projects = () => {
 
   return (
     <section 
-      className="px-4 sm:px-6 lg:px-8 py-20"
+      className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
       style={{
         backgroundColor: '#f1f1f1'
       }}
     >
       <div className="max-w-7xl mx-auto">
-     
-
         {/* Project Cards */}
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {projects.map((project, index) => (
             <div
               key={index}
               className="flex flex-col lg:flex-row lg:items-center"
               style={{
-                minHeight: 'clamp(600px, 70vw, 600px)',
-                padding: 'clamp(24px, 6vw, 72px) clamp(16px, 4vw, 64px)',
-                borderRadius: 'clamp(20px, 4vw, 32px)',
+                minHeight: 'clamp(400px, 50vw, 600px)',
+                padding: 'clamp(20px, 4vw, 72px) clamp(16px, 3vw, 64px)',
+                borderRadius: 'clamp(16px, 3vw, 32px)',
                 border: '1px solid rgba(0, 0, 0, 0.08)',
                 background: '#ffffff',
                 boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
@@ -44,10 +42,10 @@ const Projects = () => {
             >
               {/* Content Section */}
               <div 
-                className="flex-1 relative z-10 mb-6 lg:mb-0"
+                className="flex-1 relative z-10 mb-4 sm:mb-6 lg:mb-0"
                 style={{
-                  marginLeft: index === 1 ? 'clamp(200px, 45vw, 500px)' : '0',
-                  marginRight: index === 0 ? 'clamp(200px, 45vw, 500px)' : '0'
+                  marginLeft: index === 1 ? 'clamp(0px, 0vw, 500px)' : '0',
+                  marginRight: index === 0 ? 'clamp(0px, 0vw, 500px)' : '0'
                 }}
               >
                 {/* Project Title */}
@@ -55,10 +53,11 @@ const Projects = () => {
                   style={{
                     color: '#314E34',
                     fontFamily: 'Inter, sans-serif',
-                    fontSize: 'clamp(28px, 6vw, 48px)',
+                    fontSize: 'clamp(20px, 5vw, 48px)',
                     fontStyle: 'normal',
                     fontWeight: '500',
-                    marginBottom: '16px'
+                    marginBottom: '12px sm:16px',
+                    lineHeight: '1.2'
                   }}
                 >
                   {project.title}
@@ -69,12 +68,12 @@ const Projects = () => {
                   style={{
                     color: '#606060',
                     fontFamily: 'Inter, sans-serif',
-                    fontSize: 'clamp(16px, 3vw, 22px)',
+                    fontSize: 'clamp(14px, 2.5vw, 22px)',
                     fontStyle: 'normal',
                     fontWeight: '500',
-                    marginBottom: '24px',
-                    maxWidth: '500px',
-                    lineHeight: 'clamp(24px, 4vw, 32px)'
+                    marginBottom: '20px sm:24px',
+                    maxWidth: '100%',
+                    lineHeight: '1.5'
                   }}
                 >
                   {project.description}
@@ -83,13 +82,14 @@ const Projects = () => {
                 {/* Learn More Button */}
                 <div>
                   <button
+                    className="w-full sm:w-auto"
                     style={{
                       backgroundColor: '#314E34',
                       color: '#ffffff',
                       fontFamily: 'Inter, sans-serif',
-                      fontSize: '16px',
+                      fontSize: 'clamp(14px, 2vw, 16px)',
                       fontWeight: '500',
-                      padding: '12px 24px',
+                      padding: 'clamp(10px, 2vw, 12px) clamp(20px, 4vw, 24px)',
                       borderRadius: '8px',
                       border: '1px solid #314E34',
                       cursor: 'pointer',
@@ -109,25 +109,26 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Project Image */}
+              {/* Project Image - Mobile: Full width, Desktop: Absolute positioned */}
               <div 
+                className="relative lg:absolute w-full lg:w-auto h-48 sm:h-56 lg:h-full mb-4 lg:mb-0"
                 style={{
-                  position: 'absolute',
                   right: index === 0 ? '0' : 'auto',
                   left: index === 1 ? '0' : 'auto',
                   top: '0',
                   bottom: '0',
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: index === 0 ? 'flex-end' : 'flex-start',
+                  justifyContent: 'center',
                   zIndex: 2
                 }}
               >
                 <img 
                   src={project.image}
                   alt={`${project.title}`}
+                  className="w-full h-full object-cover rounded-lg lg:rounded-none"
                   style={{
-                    width: 'clamp(200px, 45vw, 500px)',
+                    width: '100%',
                     height: '100%',
                     objectFit: 'cover',
                     borderTopLeftRadius: index === 1 ? 'clamp(20px, 4vw, 32px)' : '0',
@@ -140,8 +141,6 @@ const Projects = () => {
             </div>
           ))}
         </div>
-
-       
       </div>
     </section>
   )
