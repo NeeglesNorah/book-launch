@@ -25,7 +25,7 @@ import dsc9146Image from '../assets/images/DSC_9146.jpg'
 import dsc9164Image from '../assets/images/DSC_9164.jpg'
 import fus1646Image from '../assets/images/FUS_1646.jpg'
 import mumGracefulImage from '../assets/images/Mum Graceful.jpg'
-import mumImage from '../assets/images/MUM.jpg'
+// import mumImage from '../assets/images/MUM.JPG' // Removed due to case sensitivity issues
 import mum1Image from '../assets/images/mum1.jpg'
 import mum2Image from '../assets/images/mum2.jpg'
 
@@ -49,7 +49,7 @@ export const Case1 = () => {
     dsc0777Image,
     fus1646Image,
     dsc0790Image,
-    mumImage,
+    booImage,
     dsc0805Image,
     // Continue mixing DSC images with others
     dsc9004Image,
@@ -69,7 +69,7 @@ export const Case1 = () => {
     dsc9094Image,
     fus1646Image,
     dsc9097Image,
-    mumImage,
+    book2Image,
     dsc9146Image,
     booImage,
     dsc9164Image,
