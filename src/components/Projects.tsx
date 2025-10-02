@@ -28,35 +28,27 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col lg:flex-row lg:items-center"
+              className="grid grid-cols-1 gap-6 items-center lg:grid-cols-2"
               style={{
-                minHeight: 'clamp(400px, 50vw, 600px)',
+                minHeight: 'clamp(300px, 50vw, 600px)',
                 padding: 'clamp(20px, 4vw, 72px) clamp(16px, 3vw, 64px)',
                 borderRadius: 'clamp(16px, 3vw, 32px)',
                 border: '1px solid rgba(0, 0, 0, 0.08)',
                 background: '#ffffff',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
-                position: 'relative',
-                overflow: 'hidden'
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)'
               }}
             >
-              {/* Content Section */}
-              <div 
-                className="flex-1 relative z-10 mb-4 sm:mb-6 lg:mb-0"
-                style={{
-                  marginLeft: index === 1 ? 'clamp(0px, 0vw, 500px)' : '0',
-                  marginRight: index === 0 ? 'clamp(0px, 0vw, 500px)' : '0'
-                }}
-              >
+              {/* Text Content */}
+              <div className={`flex flex-col justify-center ${index === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                 {/* Project Title */}
                 <h3
                   style={{
                     color: '#314E34',
                     fontFamily: 'Inter, sans-serif',
-                    fontSize: 'clamp(20px, 5vw, 48px)',
+                    fontSize: 'clamp(20px, 4vw, 48px)',
                     fontStyle: 'normal',
                     fontWeight: '500',
-                    marginBottom: '12px sm:16px',
+                    marginBottom: 'clamp(12px, 2vw, 16px)',
                     lineHeight: '1.2'
                   }}
                 >
@@ -71,7 +63,7 @@ const Projects = () => {
                     fontSize: 'clamp(14px, 2.5vw, 22px)',
                     fontStyle: 'normal',
                     fontWeight: '500',
-                    marginBottom: '20px sm:24px',
+                    marginBottom: 'clamp(20px, 3vw, 24px)',
                     maxWidth: '100%',
                     lineHeight: '1.5'
                   }}
@@ -109,32 +101,14 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Project Image - Mobile: Full width, Desktop: Absolute positioned */}
-              <div 
-                className="relative lg:absolute w-full lg:w-auto h-48 sm:h-56 lg:h-full mb-4 lg:mb-0"
-                style={{
-                  right: index === 0 ? '0' : 'auto',
-                  left: index === 1 ? '0' : 'auto',
-                  top: '0',
-                  bottom: '0',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  zIndex: 2
-                }}
-              >
+              {/* Project Image */}
+              <div className={`${index === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
                 <img 
                   src={project.image}
                   alt={`${project.title}`}
-                  className="w-full h-full object-cover rounded-lg lg:rounded-none"
+                  className="w-full h-48 sm:h-56 lg:h-full object-cover rounded-lg"
                   style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderTopLeftRadius: index === 1 ? 'clamp(20px, 4vw, 32px)' : '0',
-                    borderTopRightRadius: index === 0 ? 'clamp(20px, 4vw, 32px)' : '0',
-                    borderBottomLeftRadius: index === 1 ? 'clamp(20px, 4vw, 32px)' : '0',
-                    borderBottomRightRadius: index === 0 ? 'clamp(20px, 4vw, 32px)' : '0'
+                    aspectRatio: '1 / 1'
                   }}
                 />
               </div>
