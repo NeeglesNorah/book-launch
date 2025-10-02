@@ -1,4 +1,5 @@
 // Icons replaced with inline SVGs
+import dsc9089Image from '../assets/images/DSC_9089.jpg'
 
 export const Feature7 = () => (
   <div 
@@ -25,7 +26,7 @@ export const Feature7 = () => (
         <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid  lg:grid-cols-3 xl:grid-cols-4 gap-8">
           <div className="h-full w-full rounded-md aspect-square lg:col-span-2 lg:row-span-2 relative overflow-hidden">
             <img 
-              src="/src/assets/images/DSC_9089.jpg" 
+              src={dsc9089Image} 
               alt="Feature showcase" 
               className="w-full h-full object-cover rounded-md"
             />

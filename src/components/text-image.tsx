@@ -1,4 +1,5 @@
 // Icons replaced with inline SVGs
+import mumGracefulImage from '../assets/images/Mum Graceful.jpg'
 
 export const Hero3 = () => (
   <div className="w-full  py-20 lg:py-40">
@@ -38,7 +39,7 @@ export const Hero3 = () => (
         </div>
         <div className="rounded-md aspect-square overflow-hidden">
           <img 
-            src="/src/assets/images/Mum Graceful.jpg" 
+            src={mumGracefulImage} 
             alt="Beautiful portrait" 
             className="w-full h-full object-cover"
           />

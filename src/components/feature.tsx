@@ -1,5 +1,7 @@
 import { useState } from "react";
 // Icons replaced with inline SVGs
+import dsc9049Image from '../assets/images/DSC_9049.jpg'
+import dsc9065Image from '../assets/images/DSC_9065.jpg'
 
 export const Feature9 = () => {
   const [inset, setInset] = useState<number>(50);
@@ -71,7 +73,7 @@ export const Feature9 = () => {
                 </button>
               </div>
               <img
-                src="/src/assets/images/DSC_9049.jpg"
+                src={dsc9049Image}
                 alt="Feature showcase"
                 className="absolute left-0 top-0 z-10 w-full h-full aspect-video rounded-2xl select-none border object-cover"
                 style={{
@@ -79,7 +81,7 @@ export const Feature9 = () => {
                 }}
               />
               <img
-                src="/src/assets/images/DSC_9065.jpg"
+                src={dsc9065Image}
                 alt="Feature comparison"
                 className="absolute left-0 top-0 w-full h-full aspect-video rounded-2xl select-none border object-cover"
               />

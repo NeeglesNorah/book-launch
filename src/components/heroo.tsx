@@ -1,3 +1,5 @@
+import booImage from '../assets/images/boo.jpg'
+
 export const Hero3 = () => (
   <div className="w-full pt-0 pb-0">
     <div className="w-full">
@@ -33,7 +35,7 @@ export const Hero3 = () => (
         </div>
         <div className="aspect-square bg-white mt-8 lg:mt-0">
           <img 
-            src="/src/assets/images/boo.jpg" 
+            src={booImage} 
             alt="Beautiful landscape" 
             className="w-full h-full object-cover "
           />

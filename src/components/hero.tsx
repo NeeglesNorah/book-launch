@@ -1,4 +1,5 @@
 // Icons replaced with inline SVGs
+import boo2Image from '../assets/images/boo2.jpg'
 
 export const Hero4 = () => (
   <div className="w-full pt-0 pb-0">
@@ -46,7 +47,7 @@ export const Hero4 = () => (
         </div>
         <div className="aspect-square mt-8 md:order-1 md:mt-0">
           <img 
-            src="/src/assets/images/boo2.jpg" 
+            src={boo2Image} 
             alt="Beautiful landscape" 
             className="w-full h-full object-cover"
           />
