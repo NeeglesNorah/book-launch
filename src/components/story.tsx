@@ -11,7 +11,7 @@ export const Feature7 = () => (
         <div className="flex gap-4 flex-col items-start">
           <div>
             <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white text-gray-800">
-              Key Themes
+              Living & Ageing Gracefully
             </span>
           </div>
           <div className="flex gap-2 flex-col">
@@ -48,12 +48,12 @@ export const Feature7 = () => (
 
           <div className="h-full rounded-md aspect-square p-6 flex justify-between flex-col" style={{ backgroundColor: '#fff' }}>
             <div className="w-8 h-8">
-              <svg fill="none" stroke="white" viewBox="0 0 24 24" className="w-full h-full">
+              <svg fill="none" stroke="#314E34" viewBox="0 0 24 24" className="w-full h-full">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             </div>
             <div className="flex flex-col">
-              <h3 className="text-xl tracking-tight text-white">Fitness & Longevity</h3>
+              <h3 className="text-xl tracking-tight" style={{ color: '#314E34' }}>Fitness & Longevity</h3>
               <p className="text-gray-600 max-w-xs text-base">
                 How physical exercise, even in older age, strengthens the body and mind.
               </p>
@@ -91,12 +91,12 @@ export const Feature7 = () => (
 
           <div className="bg-white h-full rounded-md aspect-square p-6 flex justify-between flex-col">
             <div className="w-8 h-8">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
+              <svg fill="none" stroke="#314E34" viewBox="0 0 24 24" className="w-full h-full">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             </div>
             <div className="flex flex-col">
-              <h3 className="text-xl tracking-tight">Legacy & Impact</h3>
+              <h3 className="text-xl tracking-tight" style={{ color: '#314E34' }}>Legacy & Impact</h3>
               <p className="text-gray-600 max-w-xs text-base">
                 Living in a way that continues to bless others even in later years.
               </p>
@@ -119,12 +119,12 @@ export const Feature7 = () => (
 
           <div className="bg-white h-full rounded-md aspect-square p-6 flex justify-between flex-col">
             <div className="w-8 h-8">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
+              <svg fill="none" stroke="#314E34" viewBox="0 0 24 24" className="w-full h-full">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             </div>
             <div className="flex flex-col">
-              <h3 className="text-xl tracking-tight">Purpose & Relevance</h3>
+              <h3 className="text-xl tracking-tight" style={{ color: '#314E34' }}>Purpose & Relevance</h3>
               <p className="text-gray-600 max-w-xs text-base">
                 Staying relevant and impactful at every stage of life's journey.
               </p>
