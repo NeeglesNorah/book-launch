@@ -24,7 +24,7 @@ export const Feature7 = () => (
           </div>
         </div>
         <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid  lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          <div className="h-full w-full rounded-md aspect-square lg:col-span-2 lg:row-span-2 relative overflow-hidden">
+          <div className="h-full w-full rounded-md lg:col-span-2 lg:row-span-2 relative overflow-hidden">
             <img 
               src={dsc9089Image} 
               alt="Feature showcase" 
@@ -46,7 +46,7 @@ export const Feature7 = () => (
             </div>
           </div>
 
-          <div className="h-full rounded-md aspect-square p-6 flex justify-between flex-col" style={{ backgroundColor: '#fff' }}>
+          <div className="h-full rounded-md p-6 flex justify-between flex-col" style={{ backgroundColor: '#fff' }}>
             <div className="w-8 h-8">
               <svg fill="none" stroke="#314E34" viewBox="0 0 24 24" className="w-full h-full">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -60,7 +60,7 @@ export const Feature7 = () => (
             </div>
           </div>
 
-          <div className="bg-[#314E34] h-full rounded-md aspect-square p-6 flex justify-between flex-col">
+          <div className="bg-[#314E34] h-full rounded-md p-6 flex justify-between flex-col">
             <div className="w-8 h-8">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -74,7 +74,7 @@ export const Feature7 = () => (
             </div>
           </div>
 
-          <div className="h-full rounded-md aspect-square p-6 flex justify-between flex-col" style={{ backgroundColor: '#314E34' }}>
+          <div className="h-full rounded-md p-6 flex justify-between flex-col" style={{ backgroundColor: '#314E34' }}>
             <div className="w-8 h-8">
               <svg fill="none" stroke="white" viewBox="0 0 24 24" className="w-full h-full">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -89,7 +89,7 @@ export const Feature7 = () => (
             </div>
           </div>
 
-          <div className="bg-white h-full rounded-md aspect-square p-6 flex justify-between flex-col">
+          <div className="bg-white h-full rounded-md p-6 flex justify-between flex-col">
             <div className="w-8 h-8">
               <svg fill="none" stroke="#314E34" viewBox="0 0 24 24" className="w-full h-full">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -103,7 +103,7 @@ export const Feature7 = () => (
             </div>
           </div>
 
-          <div className="h-full rounded-md aspect-square p-6 flex justify-between flex-col" style={{ backgroundColor: '#314E34' }}>
+          <div className="h-full rounded-md p-6 flex justify-between flex-col" style={{ backgroundColor: '#314E34' }}>
             <div className="w-8 h-8">
               <svg fill="none" stroke="white" viewBox="0 0 24 24" className="w-full h-full">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -117,7 +117,7 @@ export const Feature7 = () => (
             </div>
           </div>
 
-          <div className="bg-white h-full rounded-md aspect-square p-6 flex justify-between flex-col">
+          <div className="bg-white h-full rounded-md p-6 flex justify-between flex-col">
             <div className="w-8 h-8">
               <svg fill="none" stroke="#314E34" viewBox="0 0 24 24" className="w-full h-full">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
