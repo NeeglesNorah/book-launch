@@ -1,6 +1,7 @@
 
 import FacebookIcon from './assets/icons/facebook.svg?react'
 import TwitterIcon from './assets/icons/twitter.svg?react'
+import InstagramIcon from './assets/icons/instagram.svg?react'
 import WhatsAppIcon from './assets/icons/whatsapp.svg?react'
 import LinkedInIcon from './assets/icons/linkedin.svg?react'
 import HamburgerIcon from './assets/icons/hamburger.svg?react'
@@ -23,6 +24,7 @@ export {
   
   FacebookIcon,
   TwitterIcon,
+  InstagramIcon,
   WhatsAppIcon,
   LinkedInIcon,
 

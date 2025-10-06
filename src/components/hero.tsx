@@ -11,7 +11,7 @@ export const Hero4 = () => (
               Living & Ageing Gracefully by the Power of God
             </h1>
             <p className="text-base sm:text-lg md:text-xl leading-relaxed tracking-tight text-gray-300 max-w-md text-left">
-              Discover the inspiring journey of an 85-year-old woman who has defied the odds of time, lived with strength and vitality, and continues to impact lives across generations. This is not just a book it is a living testimony of faith, health, and purpose.
+              Discover the inspiring journey of an 83-year-old woman who has defied the odds of time, lived with strength and vitality, and continues to impact lives across generations. This is not just a book it is a living testimony of faith, health, and purpose.
             </p>
           </div>
           <div className="relative overflow-hidden mt-2 sm:mt-4">

@@ -1,4 +1,4 @@
-import { FacebookIcon, TwitterIcon, WhatsAppIcon, LinkedInIcon, LogoIcon } from '@/icons'
+import { FacebookIcon, InstagramIcon, WhatsAppIcon, LinkedInIcon, LogoIcon } from '@/icons'
 
 const Footer = () => {
   return (
@@ -43,6 +43,12 @@ const Footer = () => {
           {/* CTA Button */}
           <div className="flex justify-center">
             <button
+              onClick={() => {
+                const element = document.getElementById('contact')
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
               style={{
                 backgroundColor: '#FFFFFF',
                 color: '#314E34',
@@ -110,7 +116,9 @@ const Footer = () => {
               About the Book
             </a>
             <a 
-              href="#contact"
+              href="https://wa.me/+2347049393818"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 color: '#FFFFFF',
                 fontFamily: 'Inter, sans-serif',
@@ -129,7 +137,7 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex gap-2 sm:gap-3 lg:gap-4 order-2 lg:order-3">
             <a 
-              href="https://twitter.com"
+              href="https://www.instagram.com/oghalechunu/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 md:w-8 md:h-8 flex items-center justify-center transition-transform hover:scale-110"
@@ -140,7 +148,7 @@ const Footer = () => {
                 backgroundColor: '#FFFFFF'
               }}
             >
-              <TwitterIcon 
+              <InstagramIcon 
                 className="w-4 h-4 md:w-4 md:h-4"
                 style={{
                   width: '18px',
@@ -152,7 +160,7 @@ const Footer = () => {
             </a>
             
             <a 
-              href="https://facebook.com"
+              href="https://www.facebook.com/Mama.Chunu/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 md:w-8 md:h-8 flex items-center justify-center transition-transform hover:scale-110"
@@ -175,7 +183,7 @@ const Footer = () => {
             </a>
             
             <a 
-              href="https://wa.me"
+              href="https://wa.me/07049393818"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 md:w-8 md:h-8 flex items-center justify-center transition-transform hover:scale-110"
@@ -198,7 +206,7 @@ const Footer = () => {
             </a>
             
             <a 
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/oghalechunu"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 md:w-8 md:h-8 flex items-center justify-center transition-transform hover:scale-110"

@@ -5,6 +5,7 @@ interface WaitlistFormData {
   lastName: string;
   email: string;
   phoneNumber: string;
+  country: string;
   company: string;
   message: string;
 }
@@ -15,6 +16,7 @@ export const WaitlistForm = () => {
     lastName: "",
     email: "",
     phoneNumber: "",
+    country: "",
     company: "",
     message: ""
   });
@@ -22,7 +24,7 @@ export const WaitlistForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -49,6 +51,7 @@ export const WaitlistForm = () => {
         lastName: "",
         email: "",
         phoneNumber: "",
+        country: "",
         company: "",
         message: ""
       });
@@ -210,6 +213,116 @@ export const WaitlistForm = () => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent bg-white"
                     placeholder="+1 (555) 123-4567"
                   />
+                </div>
+
+                <div>
+                  <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-1">
+                    Country *
+                  </label>
+                  <select
+                    id="country"
+                    name="country"
+                    required
+                    value={formData.country}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent bg-white text-gray-900"
+                  >
+                    <option value="">Select your country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                    <option value="DE">Germany</option>
+                    <option value="FR">France</option>
+                    <option value="IT">Italy</option>
+                    <option value="ES">Spain</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="SE">Sweden</option>
+                    <option value="NO">Norway</option>
+                    <option value="DK">Denmark</option>
+                    <option value="FI">Finland</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="AT">Austria</option>
+                    <option value="BE">Belgium</option>
+                    <option value="IE">Ireland</option>
+                    <option value="PT">Portugal</option>
+                    <option value="GR">Greece</option>
+                    <option value="PL">Poland</option>
+                    <option value="CZ">Czech Republic</option>
+                    <option value="HU">Hungary</option>
+                    <option value="RO">Romania</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="HR">Croatia</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="SK">Slovakia</option>
+                    <option value="LT">Lithuania</option>
+                    <option value="LV">Latvia</option>
+                    <option value="EE">Estonia</option>
+                    <option value="JP">Japan</option>
+                    <option value="KR">South Korea</option>
+                    <option value="CN">China</option>
+                    <option value="IN">India</option>
+                    <option value="SG">Singapore</option>
+                    <option value="HK">Hong Kong</option>
+                    <option value="TW">Taiwan</option>
+                    <option value="TH">Thailand</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="PH">Philippines</option>
+                    <option value="VN">Vietnam</option>
+                    <option value="BR">Brazil</option>
+                    <option value="AR">Argentina</option>
+                    <option value="MX">Mexico</option>
+                    <option value="CL">Chile</option>
+                    <option value="CO">Colombia</option>
+                    <option value="PE">Peru</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="KE">Kenya</option>
+                    <option value="EG">Egypt</option>
+                    <option value="MA">Morocco</option>
+                    <option value="TN">Tunisia</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="GH">Ghana</option>
+                    <option value="ET">Ethiopia</option>
+                    <option value="UG">Uganda</option>
+                    <option value="TZ">Tanzania</option>
+                    <option value="ZW">Zimbabwe</option>
+                    <option value="BW">Botswana</option>
+                    <option value="NA">Namibia</option>
+                    <option value="ZM">Zambia</option>
+                    <option value="MW">Malawi</option>
+                    <option value="MZ">Mozambique</option>
+                    <option value="AO">Angola</option>
+                    <option value="CM">Cameroon</option>
+                    <option value="CI">Côte d'Ivoire</option>
+                    <option value="SN">Senegal</option>
+                    <option value="ML">Mali</option>
+                    <option value="BF">Burkina Faso</option>
+                    <option value="NE">Niger</option>
+                    <option value="TD">Chad</option>
+                    <option value="SD">Sudan</option>
+                    <option value="SS">South Sudan</option>
+                    <option value="CF">Central African Republic</option>
+                    <option value="CD">Democratic Republic of the Congo</option>
+                    <option value="CG">Republic of the Congo</option>
+                    <option value="GA">Gabon</option>
+                    <option value="GQ">Equatorial Guinea</option>
+                    <option value="ST">São Tomé and Príncipe</option>
+                    <option value="GW">Guinea-Bissau</option>
+                    <option value="GN">Guinea</option>
+                    <option value="SL">Sierra Leone</option>
+                    <option value="LR">Liberia</option>
+                    <option value="TG">Togo</option>
+                    <option value="BJ">Benin</option>
+                    <option value="RW">Rwanda</option>
+                    <option value="BI">Burundi</option>
+                    <option value="DJ">Djibouti</option>
+                    <option value="SO">Somalia</option>
+                    <option value="ER">Eritrea</option>
+                    <option value="LY">Libya</option>
+                    <option value="OTHER">Other</option>
+                  </select>
                 </div>
 
               

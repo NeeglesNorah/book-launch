@@ -24,7 +24,14 @@ export const CTA1 = () => (
               backgroundColor: '#ffffff',
               color: '#314E34',
               border: 'none',
-              outline: 'none'
+              outline: 'none',
+              cursor: 'pointer'
+            }}
+            onClick={() => {
+              const element = document.getElementById('contact')
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' })
+              }
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.setProperty('background-color', '#f3f4f6', 'important');

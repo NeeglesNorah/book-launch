@@ -5,7 +5,7 @@ const About = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [hasStarted, setHasStarted] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
-  const fullText = "What started as a simple article in 2012 became a movement. An 85-year-old woman's journey of faith, fitness, and fearless living proving that age is just a number when you have God's grace and the right mindset."
+  const fullText = "What started as a simple article in 2012 became a movement. An 83-year-old woman's journey of faith, fitness, and fearless living proving that age is just a number when you have God's grace and the right mindset."
   
   // Intersection Observer to detect when section comes into view
   useEffect(() => {

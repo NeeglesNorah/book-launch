@@ -35,25 +35,32 @@ export const FAQ1 = () => {
               </p>
             </div>
             <div className="">
-              <button 
-                className="px-6 py-3 border border-white rounded-md font-medium transition-colors duration-200 flex items-center gap-4"
-                style={{ 
-                  backgroundColor: '#ffffff',
-                  color: '#314E34',
-                  borderColor: '#ffffff'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.setProperty('background-color', '#f3f4f6', 'important');
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.setProperty('background-color', '#ffffff', 'important');
-                }}
+              <a 
+                href="https://wa.me/+2347049393818"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
               >
-                Have questions? Contact us 
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </button>
+                <button 
+                  className="px-6 py-3 border border-white rounded-md font-medium transition-colors duration-200 flex items-center gap-4"
+                  style={{ 
+                    backgroundColor: '#ffffff',
+                    color: '#314E34',
+                    borderColor: '#ffffff'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.setProperty('background-color', '#f3f4f6', 'important');
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.setProperty('background-color', '#ffffff', 'important');
+                  }}
+                >
+                  Have questions? Contact us 
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -61,11 +68,11 @@ export const FAQ1 = () => {
           {[
             {
               question: "What makes this book different from other books on ageing?",
-              answer: "This book is written by an 85-year-old author who is a living example of what she teaches. It combines practical wisdom with spiritual insights, showing that ageing gracefully is not just possible but can be embraced with joy and purpose."
+              answer: "This book is written by an 83-year-old author who is a living example of what she teaches. It combines practical wisdom with spiritual insights, showing that ageing gracefully is not just possible but can be embraced with joy and purpose."
             },
             {
               question: "Is this book only for older adults?",
-              answer: "Not at all! While the author is 85, the principles apply to anyone who wants to live with vitality and purpose at any age. Younger readers will find a roadmap for healthy living, while older readers will be encouraged and inspired."
+              answer: "Not at all! While the author is 83, the principles apply to anyone who wants to live with vitality and purpose at any age. Younger readers will find a roadmap for healthy living, while older readers will be encouraged and inspired."
             },
             {
               question: "What practical advice does the book offer?",

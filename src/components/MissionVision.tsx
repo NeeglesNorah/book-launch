@@ -1,6 +1,7 @@
 import aboutImage1 from '../assets/images/DSC_9049.jpg'
 import aboutImage2 from '../assets/images/DSC_9065.jpg'
-import aboutImage3 from '../assets/images/DSC_9089.jpg'
+import aboutImage3 from '../assets/images/DSC_9094.jpg'
+import aboutImage4 from '../assets/images/DSC_9097.jpg'
 
 const MissionVision = () => {
   const missionImages = [
@@ -14,33 +15,26 @@ const MissionVision = () => {
     {
       id: 2,
       src: aboutImage2,
-      position: 'top-10 right-0',
-      rotation: '8deg',
+      position: 'bottom-10 right-0',
+      rotation: '8.51deg',
       glowColor: 'rgba(253, 213, 64, 0.32)'
-    },
-    {
-      id: 3,
-      src: aboutImage3,
-      position: 'bottom-[-10px] right-16',
-      rotation: '0deg',
-      glowColor: 'rgba(255, 99, 99, 0.32)'
     }
   ]
 
   const visionImages = [
     {
       id: 1,
-      src: aboutImage1,
+      src: aboutImage3,
       position: 'bottom-10 left-30',
       rotation: '8.51deg',
-      glowColor: 'rgba(29, 103, 255, 0.32)'
+      glowColor: 'rgba(34, 197, 94, 0.32)'
     },
     {
       id: 2,
-      src: aboutImage2,
+      src: aboutImage4,
       position: 'bottom-10 left-0',
       rotation: '-8.51deg',
-      glowColor: 'rgba(253, 213, 64, 0.32)'
+      glowColor: 'rgba(168, 85, 247, 0.32)'
     }
   ]
 
@@ -80,7 +74,7 @@ const MissionVision = () => {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: 'center',
+            objectPosition: 'top center',
             borderRadius: '10px'
           }}
         />
@@ -146,7 +140,7 @@ const MissionVision = () => {
                 marginBottom: '0'
               }}
             >
-              At 85 years old, she is a{' '}
+              At 83 years old, she is a{' '}
               <span style={{ color: '#A6A6A6' }}>living example</span> of what it means to age gracefully
             </h2>
           </div>
@@ -158,8 +152,7 @@ const MissionVision = () => {
             {missionImages.map((card, index) => {
               const mobilePositions = [
                 'top-0 left-0',
-                'top-0 right-0',
-                'top-20 left-1/2 transform -translate-x-1/2'
+                'top-0 right-0'
               ];
               return (
                 <ImageCard 

@@ -1,6 +1,32 @@
 import booImage from '../assets/images/boo.jpg'
 
-export const Hero3 = () => (
+export const Hero3 = () => {
+  const openProjectsModal = () => {
+    // Find the Projects component and trigger its modal
+    const projectsSection = document.getElementById('projects')
+    if (projectsSection) {
+      // Scroll to projects section first
+      projectsSection.scrollIntoView({ behavior: 'smooth' })
+      
+      // Wait a bit for scroll to complete, then trigger modal
+      setTimeout(() => {
+        // Find the first "Learn more" button in the projects section and click it
+        const learnMoreButton = projectsSection.querySelector('button')
+        if (learnMoreButton) {
+          learnMoreButton.click()
+        }
+      }, 800)
+    }
+  }
+
+  const scrollToWaitlist = () => {
+    const element = document.getElementById('contact')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  return (
   <div className="w-full pt-0 pb-0">
     <div className="w-full">
       <div className="grid grid-cols-1 gap-6 items-center lg:grid-cols-2">
@@ -15,13 +41,14 @@ export const Hero3 = () => (
               Ageing is Not a Curse, It's a Blessing
             </h1>
             <p className="text-base sm:text-lg md:text-xl leading-relaxed tracking-tight text-gray-300 max-w-md text-left">
-              At 85, she leads aerobics, inspires generations, and proves that with God's grace, every year can be your best year yet.
+              At 83, she leads aerobics, inspires generations, and proves that with God's grace, every year can be your best year yet.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <button 
               className="px-4 py-2 sm:px-6 sm:py-3 text-black font-medium transition-colors duration-200 flex items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base"
-              style={{ backgroundColor: '#ffffff' }}
+              style={{ backgroundColor: '#ffffff', cursor: 'pointer' }}
+              onClick={openProjectsModal}
             >
               Learn More 
               <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,7 +57,8 @@ export const Hero3 = () => (
             </button>
             <button 
               className="px-4 py-2 sm:px-6 sm:py-3 text-black font-medium transition-colors duration-200 flex items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base"
-              style={{ backgroundColor: '#ffffff' }}
+              style={{ backgroundColor: '#ffffff', cursor: 'pointer' }}
+              onClick={scrollToWaitlist}
             >
               Pre-Order Book 
               <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,4 +77,5 @@ export const Hero3 = () => (
       </div>
     </div>
   </div>
-);
+  )
+}
