@@ -43,11 +43,9 @@ const Projects = () => {
                 minHeight: 'clamp(300px, 50vw, 600px)',
                 padding: 'clamp(20px, 4vw, 72px) clamp(16px, 3vw, 64px)',
                 borderRadius: 'clamp(16px, 3vw, 32px)',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                background: 'rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(20px)',
-                WebkitBackdropFilter: 'blur(20px)',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
+                border: '1px solid rgba(0, 0, 0, 0.08)',
+                background: '#ffffff',
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
                 position: 'relative',
                 overflow: 'hidden'
               }}
@@ -57,14 +55,13 @@ const Projects = () => {
                 {/* Project Title */}
                 <h3
                   style={{
-                    color: '#2d3a2d',
+                    color: '#314E34',
                     fontFamily: 'Inter, sans-serif',
                     fontSize: 'clamp(20px, 4vw, 48px)',
                     fontStyle: 'normal',
-                    fontWeight: '600',
+                    fontWeight: '500',
                     marginBottom: 'clamp(12px, 2vw, 16px)',
-                    lineHeight: '1.2',
-                    textShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'
+                    lineHeight: '1.2'
                   }}
                 >
                   {project.title}
@@ -73,15 +70,14 @@ const Projects = () => {
                 {/* Project Description */}
                 <p
                   style={{
-                    color: '#4a4a4a',
+                    color: '#606060',
                     fontFamily: 'Inter, sans-serif',
                     fontSize: 'clamp(14px, 2.5vw, 22px)',
                     fontStyle: 'normal',
                     fontWeight: '500',
                     marginBottom: 'clamp(20px, 3vw, 24px)',
                     maxWidth: '100%',
-                    lineHeight: '1.5',
-                    textShadow: '0 1px 2px rgba(0, 0, 0, 0.05)'
+                    lineHeight: '1.5'
                   }}
                 >
                   {project.description}
@@ -92,32 +88,24 @@ const Projects = () => {
                   <button
                     className="w-full sm:w-auto"
                     style={{
-                      backgroundColor: 'rgba(49, 78, 52, 0.9)',
+                      backgroundColor: '#314E34',
                       color: '#ffffff',
                       fontFamily: 'Inter, sans-serif',
                       fontSize: 'clamp(14px, 2vw, 16px)',
-                      fontWeight: '600',
+                      fontWeight: '500',
                       padding: 'clamp(10px, 2vw, 12px) clamp(20px, 4vw, 24px)',
-                      borderRadius: '12px',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                      borderRadius: '8px',
+                      border: '1px solid #314E34',
                       cursor: 'pointer',
-                      transition: 'all 0.3s ease',
-                      backdropFilter: 'blur(10px)',
-                      WebkitBackdropFilter: 'blur(10px)',
-                      boxShadow: '0 4px 15px rgba(49, 78, 52, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
-                      textShadow: '0 1px 2px rgba(0, 0, 0, 0.2)'
+                      transition: 'all 0.3s ease'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.9)'
+                      e.currentTarget.style.backgroundColor = '#ffffff'
                       e.currentTarget.style.color = '#314E34'
-                      e.currentTarget.style.transform = 'translateY(-2px)'
-                      e.currentTarget.style.boxShadow = '0 6px 20px rgba(49, 78, 52, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(49, 78, 52, 0.9)'
+                      e.currentTarget.style.backgroundColor = '#314E34'
                       e.currentTarget.style.color = '#ffffff'
-                      e.currentTarget.style.transform = 'translateY(0)'
-                      e.currentTarget.style.boxShadow = '0 4px 15px rgba(49, 78, 52, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                     }}
                     onClick={() => setIsPopupOpen(true)}
                   >
@@ -128,25 +116,14 @@ const Projects = () => {
 
               {/* Project Image */}
               <div className={`${index === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                <div
+                <img 
+                  src={project.image}
+                  alt={`${project.title}`}
+                  className="w-full h-48 sm:h-56 lg:h-full object-cover rounded-lg"
                   style={{
-                    position: 'relative',
-                    borderRadius: '16px',
-                    overflow: 'hidden',
-                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
-                    border: '1px solid rgba(255, 255, 255, 0.2)'
+                    aspectRatio: '1 / 1'
                   }}
-                >
-                  <img 
-                    src={project.image}
-                    alt={`${project.title}`}
-                    className="w-full h-48 sm:h-56 lg:h-full object-cover"
-                    style={{
-                      aspectRatio: '1 / 1',
-                      borderRadius: '16px'
-                    }}
-                  />
-                </div>
+                />
               </div>
             </div>
           ))}
@@ -173,58 +150,32 @@ const Projects = () => {
         >
           <div
             style={{
-              backgroundColor: '#ffffff',
+              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
               borderRadius: '16px',
               padding: '32px',
               maxWidth: '400px',
               width: '100%',
               textAlign: 'center',
-              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.15)',
+              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
               position: 'relative'
             }}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
-            <button
-              onClick={() => setIsPopupOpen(false)}
-              style={{
-                position: 'absolute',
-                top: '16px',
-                right: '16px',
-                background: 'none',
-                border: 'none',
-                fontSize: '24px',
-                cursor: 'pointer',
-                color: '#606060',
-                width: '32px',
-                height: '32px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: '50%',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#f1f1f1'
-                e.currentTarget.style.color = '#314E34'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent'
-                e.currentTarget.style.color = '#606060'
-              }}
-            >
-              ×
-            </button>
+         
 
             {/* Popup Title */}
             <h3
               style={{
-                color: '#314E34',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: '24px',
-                fontWeight: '600',
+                fontWeight: '700',
                 marginBottom: '16px',
-                marginTop: '8px'
+                marginTop: '8px',
+                textShadow: '0 2px 8px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.5)'
               }}
             >
               Connect With Us
@@ -233,12 +184,13 @@ const Projects = () => {
             {/* Popup Description */}
             <p
               style={{
-                color: '#606060',
+                color: '#f0f0f0',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: '16px',
-                fontWeight: '400',
+                fontWeight: '500',
                 marginBottom: '32px',
-                lineHeight: '1.5'
+                lineHeight: '1.5',
+                textShadow: '0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.6)'
               }}
             >
               Follow our journey and stay updated on the latest news about the book
