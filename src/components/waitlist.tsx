@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { initEmailJS, sendWaitlistEmail } from "../config/emailjs";
 
 interface WaitlistFormData {
   firstName: string;
@@ -6,7 +7,6 @@ interface WaitlistFormData {
   email: string;
   phoneNumber: string;
   country: string;
-  company: string;
   message: string;
 }
 
@@ -17,12 +17,12 @@ export const WaitlistForm = () => {
     email: "",
     phoneNumber: "",
     country: "",
-    company: "",
     message: ""
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -32,30 +32,45 @@ export const WaitlistForm = () => {
     }));
   };
 
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    initEmailJS();
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    console.log("Waitlist form submitted:", formData);
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phoneNumber: "",
-        country: "",
-        company: "",
-        message: ""
-      });
-    }, 3000);
+    try {
+      // Send email via EmailJS
+      await sendWaitlistEmail(formData);
+      
+      console.log("Waitlist form submitted successfully:", formData);
+      setIsSubmitted(true);
+      
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneNumber: "",
+          country: "",
+          message: ""
+        });
+      }, 3000);
+    } catch (error) {
+      console.error("Error submitting waitlist form:", error);
+      setSubmitError(
+        error instanceof Error 
+          ? error.message 
+          : "Failed to submit form. Please try again later."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -69,8 +84,8 @@ export const WaitlistForm = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-2">Thank you for joining our waitlist!</h3>
-              <p className="text-gray-600">We'll be in touch soon with updates.</p>
+              <h3 className="text-2xl font-semibold text-white mb-2">Thank you for joining our waitlist!</h3>
+              <p className="text-white">We'll be in touch soon with updates.</p>
             </div>
           </div>
         </div>
@@ -151,6 +166,25 @@ export const WaitlistForm = () => {
               </div>
               
               <form onSubmit={handleSubmit} className="space-y-4">
+                {submitError && (
+                  <div className="bg-red-50 border border-red-200 rounded-md p-4">
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <div className="ml-3">
+                        <h3 className="text-sm font-medium text-red-800">
+                          Error submitting form
+                        </h3>
+                        <div className="mt-2 text-sm text-red-700">
+                          <p>{submitError}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
@@ -214,6 +248,7 @@ export const WaitlistForm = () => {
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
+
 
                 <div>
                   <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-1">
@@ -325,7 +360,20 @@ export const WaitlistForm = () => {
                   </select>
                 </div>
 
-              
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    Message (Optional)
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent bg-white text-gray-900"
+                    placeholder="Tell us why you're interested in the book..."
+                  />
+                </div>
 
                 <button
                   type="submit"
