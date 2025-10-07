@@ -81,10 +81,9 @@ export const Feature7 = () => (
               </svg>
             </div>
             <div className="flex flex-col">
-              <h3 className="text-xl tracking-tight text-white">Pay supplier invoices</h3>
+              <h3 className="text-xl tracking-tight text-white">Nutrition & Vitality</h3>
               <p className="text-gray-300 max-w-xs text-base">
-                Our goal is to streamline SMB trade, making it easier and faster
-                than ever.
+                How eating right and staying active fuels a long, vibrant life.
               </p>
             </div>
           </div>

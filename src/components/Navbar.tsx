@@ -44,7 +44,7 @@ const Navbar = () => {
         {/* Logo - Left side */}
         <div className="flex items-center flex-shrink-0">
           <div onClick={() => scrollToSection('hero')} className="cursor-pointer">
-            <img src={LogoIcon} alt="Logo" className="h-10 md:h-12 w-auto" style={{ transform: 'rotate(-90deg)' }} />
+            <img src={LogoIcon} alt="Logo" className="h-10 md:h-12 w-auto" />
           </div>
         </div>
         
