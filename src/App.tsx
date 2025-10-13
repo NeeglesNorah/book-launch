@@ -15,12 +15,13 @@ import { Feature7 } from '@/components/story'
 
 import { FAQ1 } from '@/components/faq'
 import { CTA1 } from '@/components/cta'
+import { PopupModal } from '@/components/PopupModal'
 
 function App() {
   return (
     <Router>
       <div className="App relative">
-       
+        <PopupModal />
         <div className="relative z-10">
         <Routes>
           <Route path="/" element={
