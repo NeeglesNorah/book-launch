@@ -1,24 +1,6 @@
 import booImage from '../assets/images/boo.jpg'
 
 export const Hero3 = () => {
-  const openProjectsModal = () => {
-    // Find the Projects component and trigger its modal
-    const projectsSection = document.getElementById('projects')
-    if (projectsSection) {
-      // Scroll to projects section first
-      projectsSection.scrollIntoView({ behavior: 'smooth' })
-      
-      // Wait a bit for scroll to complete, then trigger modal
-      setTimeout(() => {
-        // Find the first "Learn more" button in the projects section and click it
-        const learnMoreButton = projectsSection.querySelector('button')
-        if (learnMoreButton) {
-          learnMoreButton.click()
-        }
-      }, 800)
-    }
-  }
-
   const scrollToWaitlist = () => {
     const element = document.getElementById('contact')
     if (element) {
@@ -45,22 +27,24 @@ export const Hero3 = () => {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <button 
+            <a 
+              href="https://us06web.zoom.us/meeting/register/jiF0fbMjQl6IvdM4lk6FFg"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 sm:px-6 sm:py-3 text-black font-medium transition-colors duration-200 flex items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base"
               style={{ backgroundColor: '#ffffff', cursor: 'pointer' }}
-              onClick={openProjectsModal}
             >
               Learn More 
               <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-            </button>
+            </a>
             <button 
               className="px-4 py-2 sm:px-6 sm:py-3 text-black font-medium transition-colors duration-200 flex items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base"
               style={{ backgroundColor: '#ffffff', cursor: 'pointer' }}
               onClick={scrollToWaitlist}
             >
-              Pre-Order Book 
+              Register For Launch
               <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
