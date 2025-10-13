@@ -42,13 +42,10 @@ const Footer = () => {
 
           {/* CTA Button */}
           <div className="flex justify-center">
-            <button
-              onClick={() => {
-                const element = document.getElementById('contact')
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' })
-                }
-              }}
+            <a
+              href="https://us06web.zoom.us/meeting/register/jiF0fbMjQl6IvdM4lk6FFg"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 backgroundColor: '#FFFFFF',
                 color: '#314E34',
@@ -59,7 +56,9 @@ const Footer = () => {
                 borderRadius: '8px',
                 border: '1px solid #FFFFFF',
                 cursor: 'pointer',
-                transition: 'all 0.3s ease'
+                transition: 'all 0.3s ease',
+                textDecoration: 'none',
+                display: 'inline-block'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = '#E5E5E5'
@@ -68,8 +67,8 @@ const Footer = () => {
                 e.currentTarget.style.backgroundColor = '#FFFFFF'
               }}
             >
-              Pre-Order Book
-            </button>
+              Reserve Your Spot
+            </a>
           </div>
         </div>
 
