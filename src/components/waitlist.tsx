@@ -139,7 +139,7 @@ export const WaitlistForm = () => {
               <div className="flex flex-col gap-1">
                 <p className="font-medium text-black text-sm sm:text-base">Special pricing</p>
                 <p className="text-gray-600 text-xs sm:text-sm">
-                  Enjoy exclusive  content.
+                  Enjoy exclusive pre-order pricing and bonus content.
                 </p>
               </div>
             </div>
@@ -161,8 +161,8 @@ export const WaitlistForm = () => {
           <div className="w-full">
             <div className="w-full flex flex-col p-8 gap-6">
               <div className="text-center">
-                <h3 className="text-2xl font-semibold text-black mb-2">Register for the Book Launch</h3>
-                <p className="text-gray-600">Fill out the form below to reserve your spot</p>
+                <h3 className="text-2xl font-semibold text-black mb-2">Pre-Order Your Copy</h3>
+                <p className="text-gray-600">Fill out the form below to secure your copy</p>
               </div>
               
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -405,7 +405,7 @@ export const WaitlistForm = () => {
                     </>
                   ) : (
                     <>
-                      Reserve Your Spot Now
+                      Pre-Order Now
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
