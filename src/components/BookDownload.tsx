@@ -245,13 +245,13 @@ export const BookDownload = () => {
                 />
               </svg>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Download Started!</h2>
-            <p className="text-black text-lg mb-4 max-w-md mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Download Started!</h2>
+            <p className="text-white text-lg mb-4 max-w-md mx-auto">
               Your book is downloading now. Check your downloads folder.
             </p>
             <div className="bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg p-6 mb-8 max-w-xl mx-auto backdrop-blur-sm">
-              <p className="text-black font-medium mb-2">✓ Download Complete</p>
-              <p className="text-black text-sm mb-3">
+              <p className="text-white font-medium mb-2">✓ Download Complete</p>
+              <p className="text-white text-sm mb-3">
                 Make sure to save the file in a safe location on your device.
               </p>
               <p className="text-black text-xs">
