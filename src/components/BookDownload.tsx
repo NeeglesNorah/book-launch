@@ -38,9 +38,9 @@ export const BookDownload = () => {
     setDownloadStarted(true);
     setStatus('downloaded');
 
-    // Book is hosted in the public folder
-    const bookUrl = '/Living and Ageing Gracefully Book+.pdf';
     
+    const bookUrl = '/Living-and-Ageing-Gracefully-Book.pdf';
+  
     // Create a temporary link and trigger download
     const link = document.createElement('a');
     link.href = bookUrl;
@@ -245,21 +245,21 @@ export const BookDownload = () => {
                 />
               </svg>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Download Started!</h2>
-            <p className="text-gray-200 text-lg mb-4 max-w-md mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Download Started!</h2>
+            <p className="text-black text-lg mb-4 max-w-md mx-auto">
               Your book is downloading now. Check your downloads folder.
             </p>
             <div className="bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg p-6 mb-8 max-w-xl mx-auto backdrop-blur-sm">
-              <p className="text-white font-medium mb-2">✓ Download Complete</p>
-              <p className="text-gray-200 text-sm mb-3">
+              <p className="text-black font-medium mb-2">✓ Download Complete</p>
+              <p className="text-black text-sm mb-3">
                 Make sure to save the file in a safe location on your device.
               </p>
-              <p className="text-gray-300 text-xs">
+              <p className="text-black text-xs">
                 This download link has now been used and cannot be used again on this device.
               </p>
             </div>
             
-            <p className="text-gray-300 mb-6">
+            <p className="text-black mb-6">
               Redirecting you to the homepage in a moment...
             </p>
             
@@ -272,7 +272,7 @@ export const BookDownload = () => {
             </button>
 
             <div className="mt-8">
-              <p className="text-gray-300 text-sm">
+                <p className="text-black text-sm">
                 Questions?{' '}
                 <a href="https://wa.me/2348139723327" target="_blank" rel="noopener noreferrer" className="text-white underline hover:no-underline">
                   WhatsApp +234 813 972 3327
