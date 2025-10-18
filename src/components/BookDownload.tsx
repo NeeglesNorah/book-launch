@@ -28,7 +28,7 @@ export const BookDownload = () => {
     setStatus('valid');
   }, [token]);
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     if (!token || status !== 'valid') return;
 
     // Mark that book has been downloaded from this device
@@ -38,16 +38,32 @@ export const BookDownload = () => {
     setDownloadStarted(true);
     setStatus('downloaded');
 
-    
-    const bookUrl = '/Living-and-Ageing-Gracefully-Book.pdf';
-  
-    // Create a temporary link and trigger download
-    const link = document.createElement('a');
-    link.href = bookUrl;
-    link.download = 'Living and Ageing Gracefully Book+.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    try {
+      // Fetch the PDF from the protected API endpoint
+      const response = await fetch(`/api/download-book?token=${token}`);
+      
+      if (!response.ok) {
+        throw new Error('Download failed');
+      }
+
+      // Get the file as a blob
+      const blob = await response.blob();
+      
+      // Create a download link
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Living and Ageing Gracefully Book+.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Clean up the blob URL
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Download error:', error);
+      alert('There was an error downloading the book. Please try again or contact support.');
+    }
 
     // Optional: Redirect to home page after download
     setTimeout(() => {
@@ -92,8 +108,8 @@ export const BookDownload = () => {
             </p>
             <button
               onClick={() => navigate('/')}
-              className="px-8 py-3 bg-white font-medium rounded-md transition-all hover:bg-gray-100"
-              style={{ color: '#314E34' }}
+              className="px-8 py-3 bg-white dark:bg-white font-medium rounded-md transition-all hover:bg-gray-100 dark:hover:bg-gray-100"
+              style={{ color: '#314E34', backgroundColor: '#ffffff' }}
             >
               Go to Homepage
             </button>
@@ -131,8 +147,8 @@ export const BookDownload = () => {
             </p>
             <button
               onClick={() => navigate('/')}
-              className="px-8 py-3 bg-white font-medium rounded-md transition-all hover:bg-gray-100"
-              style={{ color: '#314E34' }}
+              className="px-8 py-3 bg-white dark:bg-white font-medium rounded-md transition-all hover:bg-gray-100 dark:hover:bg-gray-100"
+              style={{ color: '#314E34', backgroundColor: '#ffffff' }}
             >
               Go to Homepage
             </button>
@@ -162,7 +178,7 @@ export const BookDownload = () => {
 
             {/* Main Content */}
             <div className="mb-8">
-              <span className="inline-flex items-center px-4 py-1 rounded-full text-sm font-medium bg-white mb-4" style={{ color: '#314E34' }}>
+              <span className="inline-flex items-center px-4 py-1 rounded-full text-sm font-medium bg-white dark:bg-white mb-4" style={{ color: '#314E34', backgroundColor: '#ffffff' }}>
                 Thank You for Your Purchase
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
@@ -181,8 +197,8 @@ export const BookDownload = () => {
             {/* Download Button */}
             <button
               onClick={handleDownload}
-              className="px-10 py-4 bg-white font-bold text-lg rounded-md transition-all hover:bg-gray-100 transform hover:scale-105 inline-flex items-center gap-3 shadow-lg"
-              style={{ color: '#314E34' }}
+              className="px-10 py-4 bg-white dark:bg-white font-bold text-lg rounded-md transition-all hover:bg-gray-100 dark:hover:bg-gray-100 transform hover:scale-105 inline-flex items-center gap-3 shadow-lg"
+              style={{ color: '#314E34', backgroundColor: '#ffffff' }}
             >
               <svg
                 className="w-6 h-6"
@@ -265,8 +281,8 @@ export const BookDownload = () => {
             
             <button
               onClick={() => navigate('/')}
-              className="px-8 py-3 bg-white font-medium rounded-md transition-all hover:bg-gray-100"
-              style={{ color: '#314E34' }}
+              className="px-8 py-3 bg-white dark:bg-white font-medium rounded-md transition-all hover:bg-gray-100 dark:hover:bg-gray-100"
+              style={{ color: '#314E34', backgroundColor: '#ffffff' }}
             >
               Go to Homepage Now
             </button>

@@ -1,12 +1,18 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/((?!api).*)", "destination": "/index.html" }
   ],
   "headers": [
     {
       "source": "/(.*\\.xml)",
       "headers": [
         { "key": "Content-Type", "value": "application/xml" }
+      ]
+    },
+    {
+      "source": "/private/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex" }
       ]
     }
   ]
