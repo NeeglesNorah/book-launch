@@ -16,13 +16,26 @@ import { Feature7 } from '@/components/story'
 import { FAQ1 } from '@/components/faq'
 import { CTA1 } from '@/components/cta'
 import { PopupModal } from '@/components/PopupModal'
+import { BookDownload } from '@/components/BookDownload'
+import { useLocation } from 'react-router-dom'
 
 function App() {
   return (
     <Router>
-      <div className="App relative">
-        <PopupModal />
-        <div className="relative z-10">
+      <AppContent />
+    </Router>
+  )
+}
+
+function AppContent() {
+  const location = useLocation()
+  const isDownloadPage = location.pathname === '/download-book'
+
+  return (
+    <div className="App relative">
+      {/* Only show popup on main pages, not on download page */}
+      {!isDownloadPage && <PopupModal />}
+      <div className="relative z-10">
         <Routes>
           <Route path="/" element={
             <>
@@ -32,7 +45,7 @@ function App() {
                 <Hero4 />
               </div>
               <div id="about">
-              <CTA1 />
+                <CTA1 />
                 <About />
                 <MissionVision />
               </div>
@@ -51,10 +64,11 @@ function App() {
               <Footer />
             </>
           } />
-       </Routes>
-        </div>
+          {/* Hidden route for book downloads - not linked anywhere on the site */}
+          <Route path="/download-book" element={<BookDownload />} />
+        </Routes>
       </div>
-    </Router>
+    </div>
   )
 }
 
