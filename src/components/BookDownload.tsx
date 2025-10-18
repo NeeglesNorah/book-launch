@@ -176,18 +176,7 @@ export const BookDownload = () => {
               </p>
             </div>
 
-            {/* Important Notice */}
-            <div className="bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg p-6 mb-8 max-w-xl mx-auto backdrop-blur-sm">
-              <p className="text-black font-medium mb-2 flex items-center justify-center gap-2">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                One-Time Download
-              </p>
-              <p className="text-black text-sm">
-                This link can only be used once on this device. Make sure to save the book after downloading.
-              </p>
-            </div>
+            
 
             {/* Download Button */}
             <button
@@ -210,7 +199,18 @@ export const BookDownload = () => {
               </svg>
               Download Your Book Now
             </button>
-
+{/* Important Notice */}
+<div className="bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg p-6 mb-8 max-w-xl mx-auto backdrop-blur-sm">
+              <p className="text-black font-medium mb-2 flex items-center justify-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                One-Time Download
+              </p>
+              <p className="text-black text-sm">
+                This link can only be used once on this device. Make sure to save the book after downloading.
+              </p>
+            </div>
             
 
             {/* Support */}
