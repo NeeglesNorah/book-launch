@@ -57,27 +57,27 @@ export const NotFound = () => {
         </div>
 
         {/* Helpful Links */}
-        <div className="bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg p-6 max-w-md mx-auto backdrop-blur-sm">
+        <div className="bg-opacity-10 border border-white border-opacity-20 rounded-lg p-6 max-w-md mx-auto backdrop-blur-sm">
           <p className="font-medium mb-3" style={{ color: '#ffffff' }}>You might be looking for:</p>
           <div className="space-y-2">
             <button
               onClick={() => navigate('/#about')}
-              className="block w-full text-left transition-colors hover:opacity-80"
-              style={{ color: '#e5e7eb' }}
+              className=" w-full text-left "
+              style={{ color: '#000' }}
             >
               → About the Book
             </button>
             <button
               onClick={() => navigate('/#projects')}
               className="block w-full text-left transition-colors hover:opacity-80"
-              style={{ color: '#e5e7eb' }}
+              style={{ color: '#000' }}
             >
               → Our Story
             </button>
             <button
               onClick={() => navigate('/#contact')}
               className="block w-full text-left transition-colors hover:opacity-80"
-              style={{ color: '#e5e7eb' }}
+              style={{ color: '#000' }}
             >
               → Contact Us
             </button>
