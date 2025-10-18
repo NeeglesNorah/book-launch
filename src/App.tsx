@@ -17,6 +17,7 @@ import { FAQ1 } from '@/components/faq'
 import { CTA1 } from '@/components/cta'
 import { PopupModal } from '@/components/PopupModal'
 import { BookDownload } from '@/components/BookDownload'
+import { NotFound } from '@/components/NotFound'
 import { useLocation } from 'react-router-dom'
 
 function App() {
@@ -30,11 +31,12 @@ function App() {
 function AppContent() {
   const location = useLocation()
   const isDownloadPage = location.pathname === '/download-book'
+  const is404Page = !['/', '/download-book'].includes(location.pathname)
 
   return (
     <div className="App relative">
-      {/* Only show popup on main pages, not on download page */}
-      {!isDownloadPage && <PopupModal />}
+      {/* Only show popup on main pages, not on download or 404 page */}
+      {!isDownloadPage && !is404Page && <PopupModal />}
       <div className="relative z-10">
         <Routes>
           <Route path="/" element={
@@ -66,6 +68,8 @@ function AppContent() {
           } />
           {/* Hidden route for book downloads - not linked anywhere on the site */}
           <Route path="/download-book" element={<BookDownload />} />
+          {/* 404 Page - Catch all other routes */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </div>
