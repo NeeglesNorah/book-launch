@@ -9,15 +9,18 @@ export const BookDownload = () => {
   const token = searchParams.get('token');
 
   useEffect(() => {
-    // Validate token
-    if (!token) {
+    // The ONE valid token for your book
+    const validToken = 'ChunuLegacy2025';
+    
+    // Validate token - must match exactly
+    if (!token || token !== validToken) {
       setStatus('invalid');
       return;
     }
 
-    // Check if token has been used
-    const usedTokens = JSON.parse(localStorage.getItem('usedBookTokens') || '[]');
-    if (usedTokens.includes(token)) {
+    // Check if book has been downloaded from this device
+    const hasDownloaded = localStorage.getItem('ChunuLegacyBookDownloaded');
+    if (hasDownloaded === 'true') {
       setStatus('used');
       return;
     }
@@ -28,10 +31,8 @@ export const BookDownload = () => {
   const handleDownload = () => {
     if (!token || status !== 'valid') return;
 
-    // Mark token as used
-    const usedTokens = JSON.parse(localStorage.getItem('usedBookTokens') || '[]');
-    usedTokens.push(token);
-    localStorage.setItem('usedBookTokens', JSON.stringify(usedTokens));
+    // Mark that book has been downloaded from this device
+    localStorage.setItem('ChunuLegacyBookDownloaded', 'true');
 
     // Start download
     setDownloadStarted(true);
