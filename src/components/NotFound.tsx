@@ -48,7 +48,7 @@ export const NotFound = () => {
           </button>
           
           <button
-            onClick={() => navigate(-1)}
+            onClick={() => navigate('https://chunulegacy.com/')}
             className="px-8 py-4 border-2 border-white font-medium text-lg rounded-md transition-all hover:bg-white hover:bg-opacity-20"
             style={{ color: '#ffffff', backgroundColor: 'transparent' }}
           >
