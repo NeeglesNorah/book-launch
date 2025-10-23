@@ -23,7 +23,7 @@ export const Hero3 = () => {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a 
-              href="https://us06web.zoom.us/meeting/register/jiF0fbMjQl6IvdM4lk6FFg"
+              href="https://selar.com/livingandageingbook"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 sm:px-6 sm:py-3 text-black font-medium transition-colors duration-200 flex items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base"

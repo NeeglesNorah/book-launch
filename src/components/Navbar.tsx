@@ -72,7 +72,7 @@ const Navbar = () => {
         {/* Desktop Reserve Spot Button - Hidden on mobile */}
         <div className="hidden lg:flex items-center flex-shrink-0">
           <a 
-            href="https://us06web.zoom.us/meeting/register/jiF0fbMjQl6IvdM4lk6FFg"
+            href="https://selar.com/livingandageingbook"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 rounded-md font-medium flex items-center gap-2 text-sm"

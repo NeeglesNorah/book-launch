@@ -5,12 +5,17 @@ export const PopupModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Show modal after a short delay for better UX on every page load
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 1000);
+    // Check if user has already seen the popup
+    const hasSeenPopup = localStorage.getItem('hasSeenBookPopup');
+    
+    if (!hasSeenPopup) {
+      // Show modal after a short delay for better UX on first visit
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+      }, 1000);
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   // Prevent body scroll when modal is open
@@ -28,6 +33,8 @@ export const PopupModal = () => {
 
   const closeModal = () => {
     setIsOpen(false);
+    // Mark that user has seen the popup
+    localStorage.setItem('hasSeenBookPopup', 'true');
   };
 
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -45,7 +52,7 @@ export const PopupModal = () => {
       style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}
       onClick={handleBackdropClick}
     >
-      <div className="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full overflow-hidden animate-slideUp">
+      <div className="relative bg-white rounded-2xl shadow-2xl max-w-md md:max-w-4xl w-full overflow-hidden animate-slideUp">
         {/* Close button */}
         <button
           onClick={closeModal}
@@ -60,7 +67,7 @@ export const PopupModal = () => {
         {/* Modal content */}
         <div className="grid md:grid-cols-2 gap-0">
           {/* Book image */}
-          <div className="relative h-64 md:h-auto">
+          <div className="relative h-48 md:h-64 md:h-auto">
             <img 
               src={booImage} 
               alt="Living & Ageing Gracefully by the Power of God" 
@@ -70,38 +77,38 @@ export const PopupModal = () => {
           </div>
 
           {/* CTA Content */}
-          <div className="p-8 md:p-10 flex flex-col justify-center">
-             <div className="mb-6">
-               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-gray-800 border border-gray-300 shadow-sm">
-                 Book Launch Event
+          <div className="p-6 md:p-8 md:p-10 flex flex-col justify-center">
+             <div className="mb-4 md:mb-6">
+               <span className="inline-flex items-center px-2 md:px-3 py-1 rounded-full text-xs font-semibold bg-white text-gray-800 border border-gray-300 shadow-sm">
+                Living & Ageing Gracefully by the Power of God
                </span>
              </div>
             
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-              Reserve Your Spot Now!
+            <h2 className="text-2xl md:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              Get the Book Now!
             </h2>
             
-            <p className="text-gray-600 mb-6 text-base md:text-lg leading-relaxed">
-              Join us for the official launch of "Living & Ageing Gracefully by the Power of God" and be part of this inspiring journey.
+            <p className="text-gray-600 mb-4 md:mb-6 text-sm md:text-base md:text-lg leading-relaxed">
+              Transform your perspective on ageing with divine wisdom and grace. Get your copy today!
             </p>
 
            
 
             <a
-              href="https://us06web.zoom.us/meeting/register/jiF0fbMjQl6IvdM4lk6FFg"
+              href="https://selar.com/livingandageingbook"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-4 px-6 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 text-base md:text-lg group no-underline"
+              className="w-full py-3 md:py-4 px-4 md:px-6 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 text-sm md:text-base md:text-lg group no-underline"
               style={{ backgroundColor: '#314E34', color: 'white', textDecoration: 'none' }}
             >
-              Reserve Your Spot
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              Get the Book
+              <svg className="w-4 md:w-5 h-4 md:h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
 
-            <p className="text-xs text-gray-500 text-center mt-4">
-              Limited spots available - Register now to secure your place
+            <p className="text-xs text-gray-500 text-center mt-3 md:mt-4">
+              Available now - Order your copy today
             </p>
           </div>
         </div>

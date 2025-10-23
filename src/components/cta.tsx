@@ -19,7 +19,7 @@ export const CTA1 = () => (
         </div>
         <div className="flex flex-row gap-4">
           <a 
-            href="https://us06web.zoom.us/meeting/register/jiF0fbMjQl6IvdM4lk6FFg"
+            href="https://selar.com/livingandageingbook"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 rounded-md font-medium flex items-center gap-4"

@@ -43,7 +43,7 @@ const Footer = () => {
           {/* CTA Button */}
           <div className="flex justify-center">
             <a
-              href="https://us06web.zoom.us/meeting/register/jiF0fbMjQl6IvdM4lk6FFg"
+              href="https://selar.com/livingandageingbook"
               target="_blank"
               rel="noopener noreferrer"
               style={{
