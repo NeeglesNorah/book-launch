@@ -67,7 +67,7 @@ const Footer = () => {
                 e.currentTarget.style.backgroundColor = '#FFFFFF'
               }}
             >
-              Reserve Your Spot
+              Get the Book
             </a>
           </div>
         </div>

@@ -10,7 +10,7 @@ export const Hero3 = () => {
         <div className="flex gap-4 flex-col mt-4 px-4 sm:ml-6 sm:px-0 lg:ml-8 lg:mt-8">
           <div>
             <span className="inline-flex items-center px-3 py-1 text-sm font-medium border border-white text-black bg-white">
-              Book Launch
+              Now Available
             </span>
           </div>
           <div className="flex gap-3 flex-col sm:gap-4">
@@ -29,7 +29,7 @@ export const Hero3 = () => {
               className="px-4 py-2 sm:px-6 sm:py-3 text-black font-medium transition-colors duration-200 flex items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base"
               style={{ backgroundColor: '#ffffff', cursor: 'pointer' }}
             >
-              Reserve your spot
+              Get the Book
               <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>

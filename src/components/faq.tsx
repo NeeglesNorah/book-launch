@@ -83,8 +83,8 @@ export const FAQ1 = () => {
               answer: "The author's faith in God's sustaining power has been central to her journey. She believes that ageing is not a curse but a blessing when lived with the right mindset, healthy habits, and God's grace."
             },
             {
-              question: "When will the book be available for purchase?",
-              answer: "The book is currently available for pre-order. Join our waitlist to be notified when it officially launches and to receive special early-bird pricing and exclusive content."
+              question: "How can I purchase the book?",
+              answer: "The book is now available for purchase! Order your copy today and start your journey to living and ageing gracefully by the power of God."
             }
           ].map((faq, index) => (
             <div 

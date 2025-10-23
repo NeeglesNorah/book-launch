@@ -124,9 +124,9 @@ export const WaitlistForm = () => {
                 </svg>
               </div>
               <div className="flex flex-col gap-1">
-                <p className="font-medium text-black text-sm sm:text-base">Early access</p>
+                <p className="font-medium text-black text-sm sm:text-base">Available Now</p>
                 <p className="text-gray-600 text-xs sm:text-sm">
-                  Get your copy before the official launch date.
+                  Order your copy today and start your journey.
                 </p>
               </div>
             </div>
